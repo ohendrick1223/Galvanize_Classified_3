@@ -1,0 +1,31 @@
+{
+  "name": "galvanize_classified_3",
+  "version": "1.0.0",
+  "description": "## Read the entire README before beginning. Commit often.",
+  "main": "server.js",
+  "start": "node server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engine": {
+  "node": "7.0.0"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohendrick1223/Galvanize_Classified_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohendrick1223/Galvanize_Classified_3/issues"
+  },
+  "homepage": "https://github.com/ohendrick1223/Galvanize_Classified_3#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "knex": "^0.12.6",
+    "pg": "^6.1.2"
+  }
+}

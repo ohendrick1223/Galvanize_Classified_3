@@ -1,0 +1,33 @@
+<h1>Classifieds</h1>
+<p>
+  <a ui-sref="post">Post a new add</a>
+</p>
+
+<div role="presentation" class="active">
+ <input name="search" ng-model="searchText" type="search" class="form-control input-sm search-form" placeholder="Search by keyword">
+</div>
+
+  <p>Sort By: </p>
+  <span class="caret"></span>
+   <button ng-click="$ctrl.propertyToOrderBy = 'price' ; $ctrl.propertyToShowBy = 'Price'"><a value="price">Price</a></button>
+   <button ng-click="$ctrl.propertyToOrderBy = 'created_at' ; $ctrl.propertyToShowBy = 'Date'"><a value="date">Date</a></button>
+   <!-- TODO:Need to re-write routes to have access to created_at/updated_at in object -->
+
+
+<div class="" ng-repeat="post in $ctrl.allPosts | filter : searchText | orderBy: $ctrl.propertyToOrderBy">
+
+  <img ng-src="{{post.item_image}}">
+  <div class="">
+    {{post.title}}
+  </div>
+  <div class="">
+    {{post.description}}
+  </div>
+  <div class="">
+    {{post.price}}
+  </div>
+  <div class="">
+<button type="button" name="delete" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
+<button type="button" name="edit" ui-sref="edit({editId: post.id})">Edit Post</button>
+</div>
+  </div>
