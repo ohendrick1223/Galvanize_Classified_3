@@ -1,34 +1,59 @@
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 text-center">
 <h1>Galvanize Classifieds</h1>
 <h4>Connecting Members one ad at a time</h4>
-<p>
-  <a ui-sref="post">Post a new add</a>
-</p>
-
-<div role="presentation" class="active">
- <input name="search" ng-model="searchText" type="search" class="form-control input-sm search-form" placeholder="Search by keyword">
+</div>
+<div class="col-md-3"></div>
 </div>
 
-  <p>Sort By: </p>
-  <span class="caret"></span>
-   <button ng-click="$ctrl.propertyToOrderBy = 'price' ; $ctrl.propertyToShowBy = 'Price'"><a value="price">Price</a></button>
-   <button ng-click="$ctrl.propertyToOrderBy = 'created_at' ; $ctrl.propertyToShowBy = 'Date'"><a value="date">Date</a></button>
-   <!-- TODO:Need to re-write routes to have access to created_at/updated_at in object -->
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <button>
+      <a ui-sref="post">Post a new add</a>
+    </button>
 
+    <div class="">
+      <p>Sort By: </p>
+      <button ng-click="$ctrl.propertyToOrderBy = 'price' ; $ctrl.propertyToShowBy = 'Price'"><a value="price">Price</a></button>
+      <button ng-click="$ctrl.propertyToOrderBy = 'created_at' ; $ctrl.propertyToShowBy = 'Date'"><a value="date">Date</a></button>
+    </div>
 
-<div class="" ng-repeat="post in $ctrl.allPosts | filter : searchText | orderBy: $ctrl.propertyToOrderBy">
+    <div role="presentation" class="active">
+     <input name="search" ng-model="searchText" type="search" class="form-control input-sm" placeholder="Search by keyword">
+    </div>
 
-  <img ng-src="{{post.item_image}}">
-  <div class="">
-    {{post.title}}
   </div>
-  <div class="">
-    {{post.description}}
-  </div>
-  <div class="">
-    {{post.price}}
-  </div>
-  <div class="">
-<button type="button" name="delete" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
-<button type="button" name="edit" ui-sref="edit({editId: post.id})">Edit Post</button>
+  <div class="col-md-3"></div>
 </div>
+
+
+
+<div class="row" ng-repeat="post in $ctrl.allPosts | filter : searchText | orderBy: $ctrl.propertyToOrderBy">
+  <div class="col-md-12">
+    <div class="well">
+      <div class="media-left">
+        <img class="img-responsive" ng-src="{{post.item_image}}">
+      </div>
+
+      <div>
+        {{post.title}}
+      </div>
+
+      <div>
+        {{post.description}}
+      </div>
+
+      <div>
+        {{post.price}}
+      </div>
+
+      <div>
+        <button type="button" name="delete" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
+        <button type="button" name="edit" ui-sref="edit({editId: post.id})">Edit Post</button>
+      </div>
+    </div>
   </div>
+
+</div>
