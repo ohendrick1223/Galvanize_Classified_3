@@ -1,0 +1,41 @@
+body {
+  font-family: 'Arsenal', sans-serif;
+  background-image: url('assets/classified-background7.jpeg');
+  opacity: .9;
+}
+
+a:focus, a:hover {
+    color: black;
+    text-decoration: none;
+    opacity: .6;
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header-text {
+  font-size: 60px;
+}
+.description-text {
+  font-size: 20px;
+}
+
+.bar {
+  opacity: 0.7;
+  background: white;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  margin-top: 5.0em;
+  color: black;
+}
+
+.custom-button {
+  text-decoration: none;
+  min-width: 130px;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}

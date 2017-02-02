@@ -14,6 +14,7 @@
 
       vm.$onInit = function() {
       };
+
       vm.submitPost = postService.submitPost;
 
     }

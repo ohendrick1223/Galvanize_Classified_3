@@ -1,16 +1,17 @@
+
 <div class="row">
 <div class="col-md-3"></div>
-<div class="col-md-6 text-center">
-<h1>Galvanize Classifieds</h1>
-<h4>Connecting Members one ad at a time</h4>
+<div class="col-md-6 text-center bar">
+<h1 class="header-text">Galvanize Classifieds</h1>
+<h2>Connecting Members to the technology goods they need</h2>
 </div>
 <div class="col-md-3"></div>
 </div><br>
 
 <br><br><div class="row">
   <div class="col-md-4 text-left">
-    <button ng-click="$ctrl.propertyToOrderBy = 'price' ; $ctrl.propertyToShowBy = 'Price'"><a value="price">Sort by Price</a></button>
-    <button ng-click="$ctrl.propertyToOrderBy = 'created_at' ; $ctrl.propertyToShowBy = 'Date'"><a value="date">Sort by Date</a></button>
+    <button class="btn custom-button" ng-click="$ctrl.propertyToOrderBy = 'price' ; $ctrl.propertyToShowBy = 'Price'"><a value="price">Sort by Price</a></button>
+    <button class="btn custom-button" ng-click="$ctrl.propertyToOrderBy = 'created_at' ; $ctrl.propertyToShowBy = 'Date'"><a value="date">Sort by Date</a></button>
   </div>
 
   <div class="col-md-4 active" role="presententation">
@@ -18,7 +19,7 @@
   </div>
 
   <div class="col-md-4 text-right">
-    <button>
+    <button class="btn custom-button">
       <a ui-sref="post">New Post</a>
     </button><br><br>
   </div>
@@ -27,22 +28,22 @@
 
 
 <div ng-repeat="post in $ctrl.allPosts | filter : searchText | orderBy: $ctrl.propertyToOrderBy">
-    <div class="well row">
+    <div class="well row card">
       <div class="col-md-4">
-            <img class="img-responsive" ng-src="{{post.item_image}}">
-            <div><br>
+            <img class="img-responsive img-rounded" ng-src="{{post.item_image}}">
+            <div class="description-text"><br>
               {{post.title}}
             </div>
             <div class="">
               ${{post.price}}
             </div><br>
             <div>
-              <button type="button" name="delete" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
-              <button type="button" name="edit" ui-sref="edit({editId: post.id})">Edit Post</button>
+              <button class="btn custom-button" type="button" name="delete" ng-click="$ctrl.deletePost(post.id)">Delete Post</button>
+              <button class="btn custom-button" type="button" name="edit" ui-sref="edit({editId: post.id})">Edit Post</button>
             </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-8 description-text">
         {{post.description}}
       </div>
 

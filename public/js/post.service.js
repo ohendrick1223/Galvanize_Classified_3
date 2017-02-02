@@ -2,13 +2,10 @@
   'use strict';
   angular.module('app')
   .service('postService', function($http, $state) {
-    this.allPosts = [];
     this.submitPost = function(post) {
-      console.log("getting inside service");
+      console.log("getting inside service", post);
        $http.post('/classifieds', post).then(function(response) {
-        console.log("getting inside post request", response.data);
-        this.allPosts = response.data;
-        console.log(response.data);
+        console.log("posted:", response.data);
         // $http.get('/classifieds').then(function(response) {
         //   console.log("array of classifieds", response.data);
         //   this.allPosts = response.data;
