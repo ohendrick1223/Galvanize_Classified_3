@@ -5,11 +5,6 @@ body {
   opacity: .9;
 }
 
-/*.home-page {
-  background-image: url('assets/classified-background7.jpeg');
-  opacity: .9;
-}*/
-
 a:focus, a:hover {
     color: black;
     text-decoration: none;
