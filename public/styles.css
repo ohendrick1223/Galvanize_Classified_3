@@ -1,11 +1,14 @@
 body {
   font-family: 'Arsenal', sans-serif;
-}
-
-.home-page {
-  background-image: url('assets/classified-background7.jpeg');
+  background-color: #e5ded7;
+  /*background-image: url('assets/classified-background10.jpeg');*/
   opacity: .9;
 }
+
+/*.home-page {
+  background-image: url('assets/classified-background7.jpeg');
+  opacity: .9;
+}*/
 
 a:focus, a:hover {
     color: black;
