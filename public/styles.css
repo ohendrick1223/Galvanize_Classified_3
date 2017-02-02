@@ -1,5 +1,8 @@
 body {
   font-family: 'Arsenal', sans-serif;
+}
+
+.home-page {
   background-image: url('assets/classified-background7.jpeg');
   opacity: .9;
 }
