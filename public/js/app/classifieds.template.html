@@ -28,7 +28,7 @@
 
 
 <div ng-repeat="post in $ctrl.allPosts | filter : searchText | orderBy: $ctrl.propertyToOrderBy">
-    <div class="well row card">
+    <div class="well row card custom-card">
       <div class="col-md-4">
             <img class="img-responsive img-rounded" ng-src="{{post.item_image}}">
             <div class="description-text"><br>

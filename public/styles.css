@@ -7,8 +7,7 @@ body {
 a:focus, a:hover {
     color: black;
     text-decoration: none;
-    opacity: .6;
-    outline: none;
+    opacity: .3;
 }
 
 a {
@@ -25,7 +24,7 @@ a {
 
 .bar {
   opacity: 0.7;
-  background: white;
+  background: #f2e6d9;
   border-top: 3px solid #ccc;
   border-bottom: 3px solid #ccc;
   margin-top: 5.0em;
@@ -38,4 +37,9 @@ a {
   font-size: 20px;
   color: black;
   background-color: white;
+  border-color: #f2e6d9;
+}
+
+.custom-card {
+  background-color: #f2e6d9;
 }
