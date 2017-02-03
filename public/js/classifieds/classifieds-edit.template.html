@@ -1,21 +1,24 @@
 <h1 class="text-center">Edit a classified post</h1>
 <div class="col-md-3"></div>
 <div class="col-md-6"><
-<form class="" action="index.html" method="post" name="classifiedsEditForm">
+<form class="" action="index.html" method="post" name="classifiedsEditForm" novalidate>
 
 <div class="form-group">
-  <label for="title">Title</label>
+  <label for="title">Title*</label>
   <input class="form-control" type="text" name="title" ng-model="$ctrl.post.title">
+  <p class="help-block">A title is required.</p>
 </div>
 
 <div class="form-group">
-  <label for="description">Description</label>
+  <label for="description">Description*</label>
   <textarea class="form-control" type="text" rows="6" name="description" ng-model="$ctrl.post.description" value="{{post.description}}"></textarea>
+  <p class="help-block">A description is required.</p>
 </div>
 
 <div class="form-group">
-  <label for="price">Price</label>
+  <label for="price">Price*</label>
   <input class="form-control" type="text" name="price" ng-model="$ctrl.post.price">
+  <p class="help-block">A price is required.</p>
 </div>
 
 <div class="form-group">
@@ -24,7 +27,7 @@
 </div>
 
 <div class="form-group text-center">
-  <button ng-click="$ctrl.editPost($ctrl.post)" type="submit" ui-sref="home">Update ad</button>
+  <button class="btn custom-button" ng-click="$ctrl.editPost($ctrl.post)" type="submit" ui-sref="home" ng-disabled="classifiedsForm.$invalid">Update ad</button>
 </div>
 
 </form>
