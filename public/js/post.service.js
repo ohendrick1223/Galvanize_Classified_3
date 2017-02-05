@@ -6,10 +6,9 @@
       console.log("getting inside service", post);
        $http.post('/classifieds', post).then(function(response) {
         console.log("posted:", response.data);
-        // $http.get('/classifieds').then(function(response) {
-        //   console.log("array of classifieds", response.data);
-        //   this.allPosts = response.data;
-        // });
+        $http.get('/classifieds').then(function(response) {
+          console.log("array of classifieds", response.data);
+        });
       });
       // $state.go('home');
       // TODO:need home page to refresh with new data immediately
