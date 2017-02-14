@@ -11,8 +11,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 const messages = require('./routes/classifieds');
 app.use('/classifieds', messages);
+
+app.use('*', function(req, res) {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')})
+})
 
 
 const port = process.env.PORT || 3000;
